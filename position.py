@@ -9,30 +9,46 @@ def position_create(row: int, col: int) -> position:
         raise ValueError('position_create: invalid arguments')
     return row, col
 
+
 def position_is(pos: position) -> bool:
     """
     Validate if the input parameter pos is a valid position, returning True if yes and False if otherwise
     """
-    if not (type(pos) is tuple[int,int] and pos[0]>=0):
-        raise ValueError('position_create: invalid arguments')
-    return pos
+    """if type(pos[0]) is int:
+        pos[0] = (float)(pos[0])
+    else: 
+        return False
+    if type(pos[1]) is int: 
+        pos[1] = (float)(pos[1]) 
+    else: 
+        return False"""
+    if not ((type(pos) is tuple) and (pos[0]>=0 and pos[1]>=0) and (len(pos)==2) and (type(pos[0]) is int) and (type(pos[1]) is int)):
+        return False
+        """isinstance(pos,int)"""
+    else:
+        return True
         
-
-    
-
-
 
 def position_row(pos: position) -> int:
     """
     Retrieve the row associated with the position pos passed as parameter to the function
     If arguments are invalid => raise exception ValueError with message ‘position_row: invalid arguments’
     """
+    if not ((type(pos) is tuple and  pos[0] >= 0) or not (pos[0] is int)):
+        raise ValueError('position_row: invalid arguments')
+    else:
+        return pos[0]
 
 def position_col(pos: position) -> int:
     """
     Retrieve the column associated with the position pos passed as parameter to the function
     If arguments are invalid => raise exception ValueError with message ‘position_col: invalid arguments’
     """
+    if not ((type(pos) is tuple and  pos[1] >= 0) or not (pos[1] is int)):
+        raise ValueError('position_col: invalid arguments')
+    else:
+        return pos[1]
+
 
 def position_equal(pos1: position, pos2: position) -> bool:
     """
