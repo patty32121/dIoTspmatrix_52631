@@ -55,9 +55,18 @@ def position_equal(pos1: position, pos2: position) -> bool:
     Compare if the two positions (pos1 and pos2) are equal, returning True if yes and False if otherwise
     If arguments are invalid => raise exception ValueError with message ‘position_equal: invalid arguments’
     """
+    if not (type(pos1) is tuple and type(pos2) is tuple) :
+        raise ValueError('position_equal: invalid arguments')
+    if not (pos1[0] == pos2[0] and pos1[1] == pos2[1]):
+        return False
+    else:
+        return True
 
 def position_str(pos: position) -> str:
     """
     Get the representation of the position pos as a text string with the format ‘(row, column)’
     If arguments are invalid => raise exception ValueError with message ‘position_str: invalid arguments’"""
-
+    pos1 = str(pos[0])
+    pos2 = str(pos[1])
+    pos_final = '(' + pos1 + ', ' + pos2 + ')'  
+    return pos_final
