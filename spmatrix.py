@@ -4,6 +4,9 @@ def spmatrix_create(zero: float = 0) -> spmatrix:
     e a new sparse matrix with zero parameter as zero/null – the default zero of a sparse matrix is 0
     If arguments are invalid => raise exception ValueError with message “spmatrix_create: invalid arguments”
     """
+    if not (type(row) is int and row >= 0) or not (type(col) is int and col >= 0):
+        raise ValueError('spmatrix_create: invalid arguments')
+    return row, col
 
 def spmatrix_is(mat: spmatrix) -> bool:
     """
