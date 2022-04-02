@@ -1,4 +1,4 @@
-from turtle import position
+from position import *
 
 
 spmatrix = [float, dict[position, float]]
@@ -9,14 +9,22 @@ def spmatrix_create(zero: float = 0) -> spmatrix:
     e a new sparse matrix with zero parameter as zero/null – the default zero of a sparse matrix is 0
     If arguments are invalid => raise exception ValueError with message “spmatrix_create: invalid arguments”
     """
-    if not (type(zero) is float and type(spmatrix)  >= 0):
+    if not (type(zero) is float or type(zero) is int ) or not ( zero >= 0 ):
         raise ValueError('spmatrix_create: invalid arguments')
+    if (type(zero) is int):
+        zero = float(zero)
+    """my_dict = {}
+    my_matrix = [zero, my_dict]"""
     return spmatrix
 
 def spmatrix_is(mat: spmatrix) -> bool:
     """
     Validate if the input parameter mat is a valid sparse matrix, returning True if yes and False if otherwise
     """
+    if not (type(mat) is spmatrix):
+        return False
+    else :
+        return True
 
 def spmatrix_zero_get(mat: spmatrix) -> float:
     """
