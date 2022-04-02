@@ -47,7 +47,7 @@ def spmatrix_copy(mat: spmatrix) -> spmatrix:
     If arguments are invalid => raise exception ValueError with message “spmatrix_copy: invalid arguments”
     """
 
-def spmatrix_dim(mat: spmatrix) -> [tuple[position, position], ()]:
+    """def spmatrix_dim(mat: spmatrix) -> [tuple[position, position], ()]:"""
     """
     Get the dimension of the sparse matrix mat passed as input parameter as a tuple with a pair of positions containing the minimum and maximum coordinates of the sparse matrix elements, or an empty tuple if the sparse matrixcontains no elements
     If arguments are invalid => raise exception ValueError with message “spmatrix_dim: invalid arguments”
@@ -78,7 +78,7 @@ def spmatrix_col(mat: spmatrix, col: int) -> spmatrix:
     If arguments are invalid => raise exception ValueError with message ‘spmatrix_column: invalid arguments’
     """
 
-def spmatrix_diagonal(mat: spmatrix) -> [spmatrix, ...]:
+    """def spmatrix_diagonal(mat: spmatrix) -> [spmatrix, ...]:"""
     """
     Retrieve the diagonal of the sparse matrix mat as a new sparse matrix considering the sparse matrix dimension   
     If arguments are invalid => raise exception ValueError with message ‘spmatrix_diagonal: invalid arguments’
