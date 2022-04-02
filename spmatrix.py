@@ -13,15 +13,20 @@ def spmatrix_create(zero: float = 0) -> spmatrix:
         raise ValueError('spmatrix_create: invalid arguments')
     if (type(zero) is int):
         zero = float(zero)
-    """my_dict = {}
-    my_matrix = [zero, my_dict]"""
-    return spmatrix
+    my_dict = {}
+    if zero == "":
+        my_matrix = [0, my_dict]
+    else:
+        my_matrix = [zero, my_dict]
+    return my_matrix
 
 def spmatrix_is(mat: spmatrix) -> bool:
     """
     Validate if the input parameter mat is a valid sparse matrix, returning True if yes and False if otherwise
-    """
-    if not (type(mat) is spmatrix):
+    """  
+
+
+    if not (isinstance(mat, list) and (type(mat[0]) is float or type(mat[0]) is int)):
         return False
     else :
         return True

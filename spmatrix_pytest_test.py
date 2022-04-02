@@ -14,7 +14,7 @@ def test_spmatrix_is_of_empty_matrix():
 def test_spmatrix_is_of_non_matrix_float_1():
     assert spmatrix_is(1.0) is False
 
-def test_spmatrix_get_of_empty_matrix_with_zero_as_default():
+"""def test_spmatrix_get_of_empty_matrix_with_zero_as_default():
     assert spmatrix_zero_get(spmatrix_create()) == 0.0
 
 def test_spmatrix_get_of_empty_matrix_with_zero_as_2():
@@ -39,7 +39,7 @@ def test_spmatrix_value_get_after_replacing_value_with_spmatrix_value_get():
     assert spmatrix_value_get(mat, position_create(1,2)) == 12.5
     spmatrix_value_set(mat, position_create(1,2), 5.0)
     assert spmatrix_value_get(mat, position_create(1,2)) == 5.0
-
+"""
 """def test_spmatrix_dim_of_empty_matrix():
     assert spmatrix_dim(spmatrix_create()) == ()
 
