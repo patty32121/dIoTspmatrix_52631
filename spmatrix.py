@@ -9,9 +9,9 @@ def spmatrix_create(zero: float = 0) -> spmatrix:
     e a new sparse matrix with zero parameter as zero/null – the default zero of a sparse matrix is 0
     If arguments are invalid => raise exception ValueError with message “spmatrix_create: invalid arguments”
     """
-    if not (type(zero) is float or type(zero) is int ) or not ( zero >= 0 ):
+    if not (isinstance(zero, float) or isinstance(zero, int) ) or not ( zero >= 0 ):
         raise ValueError('spmatrix_create: invalid arguments')
-    if (type(zero) is int):
+    if (isinstance(zero, int)):
         zero = float(zero)
     my_dict = {}
     if zero == "":
@@ -24,9 +24,7 @@ def spmatrix_is(mat: spmatrix) -> bool:
     """
     Validate if the input parameter mat is a valid sparse matrix, returning True if yes and False if otherwise
     """  
-
-
-    if not (isinstance(mat, list) and (type(mat[0]) is float or type(mat[0]) is int)):
+    if not (isinstance(mat, list) and (isinstance(mat[0], float) or isinstance(mat[0], int))):
         return False
     else :
         return True
@@ -36,6 +34,10 @@ def spmatrix_zero_get(mat: spmatrix) -> float:
     Get the zero/null of the sparse matrix mat passed as input parameter
     If arguments are invalid => raise exception ValueError with message “spmatrix_zero_get: invalid arguments”
     """
+    if not (isinstance(mat, list) and (isinstance(mat[0], float) or isinstance(mat[0], int))):
+        raise ValueError('spmatrix_zero_get: invalid arguments')
+    else: 
+        return mat[0]
 
 def spmatrix_zero_set(mat: spmatrix, zero: float):
     """
@@ -43,24 +45,52 @@ def spmatrix_zero_set(mat: spmatrix, zero: float):
     All the existing elements in the sparse matrix mat which are equal to the new zero/null are to be removed
     If arguments are invalid => raise exception ValueError with message “spmatrix_zero_set: invalid arguments”
     """
+    if not (isinstance(mat, list) and (isinstance(mat[0], float) or isinstance(mat[0], int)) and mat[0] >= 0) or not (isinstance(zero,float)):
+        raise ValueError('spmatrix_zero_set: invalid arguments')
+    else: 
+        mat[0] = zero
+        return mat[0]
 
 def spmatrix_value_get(mat: spmatrix, pos: position) -> float:
     """Retrieve the value from the sparse matrix mat from the given position pos passed as input parameter
     If arguments are invalid => raise exception ValueError with message “spmatrix_value_get: invalid arguments”
     """
+    my_dict = mat[1]
+    if not ((isinstance(mat, list) and (isinstance(mat[0], float) or isinstance(mat[0], int)) and mat[0] >= 0) or not (isinstance(pos, tuple) and len(pos == 2) and isinstance(pos[0], int) and isinstance(pos[1], int) and pos[0] >=0 and pos[1] >=0)):
+        raise ValueError('spmatrix_zero_get: invalid arguments')
+    else:
+        value = my_dict.get(pos) 
+        return value
 
 def spmatrix_value_set(mat: spmatrix, pos: position, val: float):
     """Set a new value to the sparse matrix mat from at given position pos with value val passed as input parameters
     If arguments are invalid => raise exception ValueError with message “spmatrix_value_set: invalid arguments”
     """
+    my_dict = mat[1]
+    if not ((isinstance(mat, list) and (isinstance(mat[0], float) or isinstance(mat[0], int)) and mat[0] >= 0) or not (isinstance(pos, tuple) and len(pos == 2) and isinstance(pos[0], int) and isinstance(pos[1], int) and pos[0] >=0 and pos[1] >=0)):
+        raise ValueError('spmatrix_zero_set: invalid arguments')
+    if not (isinstance(val,float)):
+        val = float(val)
+        my_dict[pos] = val
+    else:
+        my_dict = mat[1]
+        my_dict[pos] = val
 
 def spmatrix_copy(mat: spmatrix) -> spmatrix:
     """
     Create a copy of the sparse matrix mat passed as input parameter
     If arguments are invalid => raise exception ValueError with message “spmatrix_copy: invalid arguments”
     """
+    spmatrix2 = mat.copy()
+    zero = spmatrix2[0]
+    my_dict = spmatrix2[1]
+    if not ((isinstance(mat, list) and (isinstance(zero, float) or isinstance(zero, int)) and zero >= 0)):
+        raise ValueError('spmatrix_copy: invalid arguments')
+    else: 
+        spmatrix2 = mat
+        return spmatrix2
 
-    """def spmatrix_dim(mat: spmatrix) -> [tuple[position, position], ()]:"""
+def spmatrix_dim(mat: spmatrix) -> tuple[position, position]:
     """
     Get the dimension of the sparse matrix mat passed as input parameter as a tuple with a pair of positions containing the minimum and maximum coordinates of the sparse matrix elements, or an empty tuple if the sparse matrixcontains no elements
     If arguments are invalid => raise exception ValueError with message “spmatrix_dim: invalid arguments”
