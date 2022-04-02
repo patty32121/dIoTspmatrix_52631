@@ -1,3 +1,4 @@
+from asyncio.windows_events import NULL
 from position import *
 
 
@@ -95,6 +96,17 @@ def spmatrix_dim(mat: spmatrix) -> tuple[position, position]:
     Get the dimension of the sparse matrix mat passed as input parameter as a tuple with a pair of positions containing the minimum and maximum coordinates of the sparse matrix elements, or an empty tuple if the sparse matrixcontains no elements
     If arguments are invalid => raise exception ValueError with message “spmatrix_dim: invalid arguments”
     """
+    my_dict = mat[1]
+    pos_max = max(my_dict, key=lambda item:item[1])
+    pos_min = min(my_dict, key=lambda item:item[1])
+    if not ((isinstance(mat, list) and (isinstance(mat[0], float) or isinstance(mat[0], int)) and mat[0] >= 0)):
+        raise ValueError('spmatrix_dim: invalid arguments')
+    if my_dict == {}:
+        empty = tuple[int, int]
+        empty = [(),()]
+        return empty
+    else:
+        return pos_min, pos_max
 
 def spmatrix_sparsity(mat: spmatrix) -> float:
     """
