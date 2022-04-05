@@ -50,7 +50,7 @@ def test_spmatrix_dim_of_matrix_with_one_element():
     assert position_str(dim[0]) == '(1, 2)'
     assert position_str(dim[1]) == '(1, 2)'
 
-"""def test_spmatrix_sparsity_of_m2x2_diagonal_matrix():
+def test_spmatrix_sparsity_of_m2x2_diagonal_matrix():
     mat = spmatrix_create()
     spmatrix_value_set(mat, position_create(1,1), 12.5)
     spmatrix_value_set(mat, position_create(2,2), 5.0)
@@ -97,6 +97,6 @@ def test_spmatrix_diagonal_m2x2_anti_diagonal_zero():
     spmatrix_value_set(mat, position_create(2,1), 5.0)
     mat_diagonal = spmatrix_create()
     assert spmatrix_diagonal(mat) == mat_diagonal
-"""
+
 if __name__ == '__main__':
     pytest.main()

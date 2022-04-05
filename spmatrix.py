@@ -133,7 +133,7 @@ def spmatrix_col(mat: spmatrix, col: int) -> spmatrix:
     If arguments are invalid => raise exception ValueError with message ‘spmatrix_column: invalid arguments’
     """
 
-    """def spmatrix_diagonal(mat: spmatrix) -> [spmatrix, ...]:"""
+def spmatrix_diagonal(mat: spmatrix) -> [spmatrix, ...]:
     """
     Retrieve the diagonal of the sparse matrix mat as a new sparse matrix considering the sparse matrix dimension   
     If arguments are invalid => raise exception ValueError with message ‘spmatrix_diagonal: invalid arguments’
