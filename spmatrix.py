@@ -97,15 +97,13 @@ def spmatrix_dim(mat: spmatrix) -> tuple[position, position]:
     If arguments are invalid => raise exception ValueError with message “spmatrix_dim: invalid arguments”
     """
     my_dict = mat[1]
-    pos_max = max(my_dict, key=lambda item:item[1])
-    pos_min = min(my_dict, key=lambda item:item[1])
     if not ((isinstance(mat, list) and (isinstance(mat[0], float) or isinstance(mat[0], int)) and mat[0] >= 0)):
         raise ValueError('spmatrix_dim: invalid arguments')
-    if my_dict == {}:
-        empty = tuple[int, int]
-        empty = [(),()]
-        return empty
+    if (my_dict == {}):
+        return ()
     else:
+        pos_max = max(my_dict, key=lambda item:item[1])
+        pos_min = min(my_dict, key=lambda item:item[1])
         return pos_min, pos_max
 
 def spmatrix_sparsity(mat: spmatrix) -> float:
@@ -113,6 +111,7 @@ def spmatrix_sparsity(mat: spmatrix) -> float:
     Get the sparsity (density) of sparse matrix mat as the number of elements divided by the total number of elements (dimension)
     If arguments are invalid => raise exception ValueError with message “spmatrix_sparsity: invalid arguments”
     """
+    
 
 def spmatrix_str(mat: spmatrix, format: str) -> str:
     """
