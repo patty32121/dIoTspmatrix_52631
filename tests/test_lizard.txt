@@ -14,21 +14,22 @@
       10     11    130      2      10 spmatrix_value_get@55-64@spmatrix.py
       10     12    157      3      13 spmatrix_value_set@66-78@spmatrix.py
       13      5     74      1      13 spmatrix_copy@80-92@spmatrix.py
-      16      6    131      1      16 spmatrix_dim@94-109@spmatrix.py
-       5      1     10      1       5 spmatrix_sparsity@111-115@spmatrix.py
-       6      1     14      2       6 spmatrix_str@117-122@spmatrix.py
-       5      1     14      2       5 spmatrix_row@124-128@spmatrix.py
-      11      1     16      2      12 spmatrix_col@130-141@spmatrix.py
+      14      6    117      1      14 spmatrix_dim@94-107@spmatrix.py
+       5      1     10      1       5 spmatrix_sparsity@109-113@spmatrix.py
+       6      1     14      2       6 spmatrix_str@116-121@spmatrix.py
+       5      1     14      2       5 spmatrix_row@123-127@spmatrix.py
+       5      1     14      2       5 spmatrix_col@129-133@spmatrix.py
+       6      1     14      1       6 spmatrix_diagonal@135-140@spmatrix.py
 2 file analyzed.
 ==============================================================
 NLOC    Avg.NLOC  AvgCCN  Avg.token  function_cnt    file
 --------------------------------------------------------------
      63      10.3     5.3       66.7         6     position.py
-    118       9.6     4.8       67.9        12     spmatrix.py
+    116       8.7     4.5       62.5        13     spmatrix.py
 
 ===============================================================================================================
 No thresholds exceeded (cyclomatic_complexity > 15 or length > 1000 or nloc > 1000000 or parameter_count > 100)
 ==========================================================================================
 Total nloc   Avg.NLOC  AvgCCN  Avg.token   Fun Cnt  Warning cnt   Fun Rt   nloc Rt
 ------------------------------------------------------------------------------------------
-       181       9.8     5.0       67.5       18            0      0.00    0.00
+       179       9.2     4.8       63.8       19            0      0.00    0.00
