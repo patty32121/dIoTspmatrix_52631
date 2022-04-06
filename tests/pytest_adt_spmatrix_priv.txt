@@ -1,83 +1,84 @@
 ============================= test session starts ==============================
-collecting ... collected 46 items
+collecting ... collected 50 items
 
-pytest_spmatrix_priv.py::test_spmatrix_01 PASSED                         [  2%]
-pytest_spmatrix_priv.py::test_spmatrix_02 FAILED                         [  4%]
-pytest_spmatrix_priv.py::test_spmatrix_03 PASSED                         [  6%]
-pytest_spmatrix_priv.py::test_spmatrix_04 PASSED                         [  8%]
-pytest_spmatrix_priv.py::test_spmatrix_05 FAILED                         [ 10%]
-pytest_spmatrix_priv.py::test_spmatrix_06 FAILED                         [ 13%]
-pytest_spmatrix_priv.py::test_spmatrix_07 FAILED                         [ 15%]
-pytest_spmatrix_priv.py::test_spmatrix_08 FAILED                         [ 17%]
-pytest_spmatrix_priv.py::test_spmatrix_09 FAILED                         [ 19%]
-pytest_spmatrix_priv.py::test_spmatrix_10 FAILED                         [ 21%]
-pytest_spmatrix_priv.py::test_spmatrix_11 FAILED                         [ 23%]
-pytest_spmatrix_priv.py::test_spmatrix_12 FAILED                         [ 26%]
-pytest_spmatrix_priv.py::test_spmatrix_13 FAILED                         [ 28%]
-pytest_spmatrix_priv.py::test_spmatrix_14 PASSED                         [ 30%]
-pytest_spmatrix_priv.py::test_spmatrix_15 PASSED                         [ 32%]
-pytest_spmatrix_priv.py::test_spmatrix_16 PASSED                         [ 34%]
-pytest_spmatrix_priv.py::test_spmatrix_17 PASSED                         [ 36%]
-pytest_spmatrix_priv.py::test_spmatrix_18 PASSED                         [ 39%]
-pytest_spmatrix_priv.py::test_spmatrix_19 PASSED                         [ 41%]
-pytest_spmatrix_priv.py::test_spmatrix_20 FAILED                         [ 43%]
-pytest_spmatrix_priv.py::test_spmatrix_21 FAILED                         [ 45%]
-pytest_spmatrix_priv.py::test_spmatrix_22 PASSED                         [ 47%]
-pytest_spmatrix_priv.py::test_spmatrix_23 PASSED                         [ 50%]
-pytest_spmatrix_priv.py::test_spmatrix_24 PASSED                         [ 52%]
-pytest_spmatrix_priv.py::test_spmatrix_25 PASSED                         [ 54%]
-pytest_spmatrix_priv.py::test_spmatrix_26 PASSED                         [ 56%]
-pytest_spmatrix_priv.py::test_spmatrix_27 FAILED                         [ 58%]
-pytest_spmatrix_priv.py::test_spmatrix_28 FAILED                         [ 60%]
-pytest_spmatrix_priv.py::test_spmatrix_29 PASSED                         [ 63%]
-pytest_spmatrix_priv.py::test_spmatrix_30 PASSED                         [ 65%]
-pytest_spmatrix_priv.py::test_spmatrix_31 PASSED                         [ 67%]
-pytest_spmatrix_priv.py::test_spmatrix_32 FAILED                         [ 69%]
-pytest_spmatrix_priv.py::test_spmatrix_33 FAILED                         [ 71%]
-pytest_spmatrix_priv.py::test_spmatrix_34 FAILED                         [ 73%]
-pytest_spmatrix_priv.py::test_spmatrix_35 FAILED                         [ 76%]
-pytest_spmatrix_priv.py::test_spmatrix_36 PASSED                         [ 78%]
-pytest_spmatrix_priv.py::test_spmatrix_37 FAILED                         [ 80%]
-pytest_spmatrix_priv.py::test_spmatrix_38 FAILED                         [ 82%]
-pytest_spmatrix_priv.py::test_spmatrix_39 FAILED                         [ 84%]
-pytest_spmatrix_priv.py::test_spmatrix_40 FAILED                         [ 86%]
-pytest_spmatrix_priv.py::test_spmatrix_41 FAILED                         [ 89%]
-pytest_spmatrix_priv.py::test_spmatrix_42 FAILED                         [ 91%]
-pytest_spmatrix_priv.py::test_spmatrix_43 FAILED                         [ 93%]
-pytest_spmatrix_priv.py::test_spmatrix_44 FAILED                         [ 95%]
-pytest_spmatrix_priv.py::test_spmatrix_45 FAILED                         [ 97%]
-pytest_spmatrix_priv.py::test_spmatrix_46 FAILED                         [100%]
+pytest_spmatrix_priv.py::test_spmatrix_01_spmatrix_is PASSED             [  2%]
+pytest_spmatrix_priv.py::test_spmatrix_02_spmatrix_is FAILED             [  4%]
+pytest_spmatrix_priv.py::test_spmatrix_03_spmatrix_is PASSED             [  6%]
+pytest_spmatrix_priv.py::test_spmatrix_04_spmatrix_is PASSED             [  8%]
+pytest_spmatrix_priv.py::test_spmatrix_05_spmatrix_is PASSED             [ 10%]
+pytest_spmatrix_priv.py::test_spmatrix_06_spmatrix_is FAILED             [ 12%]
+pytest_spmatrix_priv.py::test_spmatrix_07_spmatrix_is FAILED             [ 14%]
+pytest_spmatrix_priv.py::test_spmatrix_08_spmatrix_is PASSED             [ 16%]
+pytest_spmatrix_priv.py::test_spmatrix_09_spmatrix_is FAILED             [ 18%]
+pytest_spmatrix_priv.py::test_spmatrix_09a_spmatrix_is PASSED            [ 20%]
+pytest_spmatrix_priv.py::test_spmatrix_10_spmatrix_is FAILED             [ 22%]
+pytest_spmatrix_priv.py::test_spmatrix_10a_spmatrix_is PASSED            [ 24%]
+pytest_spmatrix_priv.py::test_spmatrix_12_spmatrix_is FAILED             [ 26%]
+pytest_spmatrix_priv.py::test_spmatrix_12a_spmatrix_is PASSED            [ 28%]
+pytest_spmatrix_priv.py::test_spmatrix_13_spmatrix_is FAILED             [ 30%]
+pytest_spmatrix_priv.py::test_spmatrix_13a_spmatrix_is PASSED            [ 32%]
+pytest_spmatrix_priv.py::test_spmatrix_14_spmatrix_is PASSED             [ 34%]
+pytest_spmatrix_priv.py::test_spmatrix_14a_spmatrix_is PASSED            [ 36%]
+pytest_spmatrix_priv.py::test_spmatrix_15_spmatrix_create PASSED         [ 38%]
+pytest_spmatrix_priv.py::test_spmatrix_16_spmatrix_create PASSED         [ 40%]
+pytest_spmatrix_priv.py::test_spmatrix_17_spmatrix_create PASSED         [ 42%]
+pytest_spmatrix_priv.py::test_spmatrix_18_spmatrix_create PASSED         [ 44%]
+pytest_spmatrix_priv.py::test_spmatrix_19_spmatrix_zero_get PASSED       [ 46%]
+pytest_spmatrix_priv.py::test_spmatrix_20_spmatrix_value_set FAILED      [ 48%]
+pytest_spmatrix_priv.py::test_spmatrix_21_spmatrix_value_set FAILED      [ 50%]
+pytest_spmatrix_priv.py::test_spmatrix_22_spmatrix_value_set PASSED      [ 52%]
+pytest_spmatrix_priv.py::test_spmatrix_23_spmatrix_value_set PASSED      [ 54%]
+pytest_spmatrix_priv.py::test_spmatrix_24_spmatrix_value_get PASSED      [ 56%]
+pytest_spmatrix_priv.py::test_spmatrix_25_spmatrix_value_get PASSED      [ 58%]
+pytest_spmatrix_priv.py::test_spmatrix_26_spmatrix_dim PASSED            [ 60%]
+pytest_spmatrix_priv.py::test_spmatrix_27_spmatrix_dim FAILED            [ 62%]
+pytest_spmatrix_priv.py::test_spmatrix_28_spmatrix_dim FAILED            [ 64%]
+pytest_spmatrix_priv.py::test_spmatrix_29_spmatrix_copy PASSED           [ 66%]
+pytest_spmatrix_priv.py::test_spmatrix_30_spmatrix_copy PASSED           [ 68%]
+pytest_spmatrix_priv.py::test_spmatrix_31_spmatrix_sparsity PASSED       [ 70%]
+pytest_spmatrix_priv.py::test_spmatrix_32_spmatrix_sparsity FAILED       [ 72%]
+pytest_spmatrix_priv.py::test_spmatrix_33_spmatrix_sparsity FAILED       [ 74%]
+pytest_spmatrix_priv.py::test_spmatrix_34_spmatrix_dim FAILED            [ 76%]
+pytest_spmatrix_priv.py::test_spmatrix_35_spmatrix_sparsity FAILED       [ 78%]
+pytest_spmatrix_priv.py::test_spmatrix_36_spmatrix_zero_set PASSED       [ 80%]
+pytest_spmatrix_priv.py::test_spmatrix_37_spmatrix_str FAILED            [ 82%]
+pytest_spmatrix_priv.py::test_spmatrix_38_spmatrix_str FAILED            [ 84%]
+pytest_spmatrix_priv.py::test_spmatrix_39_spmatrix_str FAILED            [ 86%]
+pytest_spmatrix_priv.py::test_spmatrix_40_spmatrix_str FAILED            [ 88%]
+pytest_spmatrix_priv.py::test_spmatrix_41_spmatrix_row FAILED            [ 90%]
+pytest_spmatrix_priv.py::test_spmatrix_42_spmatrix_col FAILED            [ 92%]
+pytest_spmatrix_priv.py::test_spmatrix_43_spmatrix_diagonal FAILED       [ 94%]
+pytest_spmatrix_priv.py::test_spmatrix_44_spmatrix_diagonal FAILED       [ 96%]
+pytest_spmatrix_priv.py::test_spmatrix_45_spmatrix_diagonal FAILED       [ 98%]
+pytest_spmatrix_priv.py::test_spmatrix_46_spmatrix_sparsity FAILED       [100%]
 
 =================================== FAILURES ===================================
 /home/dtsd/DTSD/pytest_spmatrix_priv.py:16: assert True is False
-/home/dtsd/DTSD/pytest_spmatrix_priv.py:28: assert True is False
 /home/dtsd/DTSD/pytest_spmatrix_priv.py:32: assert True is False
 /home/dtsd/DTSD/pytest_spmatrix_priv.py:36: assert True is False
-/home/dtsd/DTSD/pytest_spmatrix_priv.py:40: assert True is False
 /home/dtsd/DTSD/pytest_spmatrix_priv.py:44: AssertionError: assert True is False
-/home/dtsd/DTSD/pytest_spmatrix_priv.py:48: assert True is False
 /home/dtsd/DTSD/pytest_spmatrix_priv.py:52: assert True is False
-/home/dtsd/DTSD/pytest_spmatrix_priv.py:56: assert True is False
-/home/dtsd/DTSD/pytest_spmatrix_priv.py:60: AssertionError: assert True is False
+/home/dtsd/DTSD/pytest_spmatrix_priv.py:60: assert True is False
+/home/dtsd/DTSD/pytest_spmatrix_priv.py:68: AssertionError: assert True is False
 /home/dtsd/DTSD/dIoTspmatrix_52631/spmatrix.py:84: TypeError: float() argument must be a string or a number, not 'tuple'
 /home/dtsd/DTSD/dIoTspmatrix_52631/spmatrix.py:84: TypeError: float() argument must be a string or a number, not 'list'
-/home/dtsd/DTSD/pytest_spmatrix_priv.py:150: AssertionError: assert ((1, 10000000...0000000, ...)) == ()
+/home/dtsd/DTSD/pytest_spmatrix_priv.py:166: AssertionError: assert ((1, 10000000...0000000, ...)) == ()
 /home/dtsd/DTSD/dIoTspmatrix_52631/spmatrix.py:115: TypeError: '>' not supported between instances of 'str' and 'int'
-/home/dtsd/DTSD/pytest_spmatrix_priv.py:184: assert 2e-07 == (99999999999998.0 / 100000000000000.0)
+/home/dtsd/DTSD/pytest_spmatrix_priv.py:200: assert 2e-07 == (99999999999998.0 / 100000000000000.0)
 /home/dtsd/DTSD/dIoTspmatrix_52631/spmatrix.py:115: TypeError: '>' not supported between instances of 'str' and 'int'
-/home/dtsd/DTSD/pytest_spmatrix_priv.py:200: assert 10000000 == 1
-/home/dtsd/DTSD/pytest_spmatrix_priv.py:209: assert 0.5 == ((24 - 2) / 24.0)
-/home/dtsd/DTSD/pytest_spmatrix_priv.py:231: AssertionError: assert None == '2.50 0.00 0.00\n0.00 0.00 5.20'
-/home/dtsd/DTSD/pytest_spmatrix_priv.py:238: AssertionError: assert None == '2.50 0.00 0.00\n0.00 0.00 5.20'
-/home/dtsd/DTSD/pytest_spmatrix_priv.py:245: AssertionError: assert None == '2.500 0.000 0.000\n0.000 0.000 5.200'
-/home/dtsd/DTSD/pytest_spmatrix_priv.py:250: AssertionError: assert None is not None
+/home/dtsd/DTSD/pytest_spmatrix_priv.py:216: assert 10000000 == 1
+/home/dtsd/DTSD/pytest_spmatrix_priv.py:225: assert 0.5 == ((24 - 2) / 24.0)
+/home/dtsd/DTSD/pytest_spmatrix_priv.py:247: AssertionError: assert None == '2.50 0.00 0.00\n0.00 0.00 5.20'
+/home/dtsd/DTSD/pytest_spmatrix_priv.py:254: AssertionError: assert None == '2.50 0.00 0.00\n0.00 0.00 5.20'
+/home/dtsd/DTSD/pytest_spmatrix_priv.py:261: AssertionError: assert None == '2.500 0.000 0.000\n0.000 0.000 5.200'
+/home/dtsd/DTSD/pytest_spmatrix_priv.py:266: AssertionError: assert None is not None
 /home/dtsd/DTSD/dIoTspmatrix_52631/spmatrix.py:69: TypeError: 'NoneType' object is not subscriptable
 /home/dtsd/DTSD/dIoTspmatrix_52631/spmatrix.py:69: TypeError: 'NoneType' object is not subscriptable
 /home/dtsd/DTSD/dIoTspmatrix_52631/spmatrix.py:69: TypeError: 'NoneType' object is not subscriptable
-/home/dtsd/DTSD/pytest_spmatrix_priv.py:296: assert None
-/home/dtsd/DTSD/pytest_spmatrix_priv.py:303: AssertionError: assert None is not None
-/home/dtsd/DTSD/pytest_spmatrix_priv.py:322: assert 9.621378621378621 == (((1001 * 1001) - 9631) / (1001 * 1001))
+/home/dtsd/DTSD/pytest_spmatrix_priv.py:312: assert None
+/home/dtsd/DTSD/pytest_spmatrix_priv.py:319: AssertionError: assert None is not None
+/home/dtsd/DTSD/pytest_spmatrix_priv.py:338: assert 9.621378621378621 == (((1001 * 1001) - 9631) / (1001 * 1001))
 ============================== slowest durations ===============================
 
-(138 durations < 1s hidden.  Use -vv to show these durations.)
-======================== 28 failed, 18 passed in 0.04s =========================
+(150 durations < 1s hidden.  Use -vv to show these durations.)
+======================== 25 failed, 25 passed in 0.04s =========================
