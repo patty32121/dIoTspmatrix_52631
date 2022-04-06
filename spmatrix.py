@@ -1,4 +1,3 @@
-from asyncio.windows_events import NULL
 from position import *
 
 
@@ -47,10 +46,21 @@ def spmatrix_zero_set(mat: spmatrix, zero: float):
     If arguments are invalid => raise exception ValueError with message “spmatrix_zero_set: invalid arguments”
     """
     if not (isinstance(mat, list) and (isinstance(mat[0], float) or isinstance(mat[0], int)) and mat[0] >= 0) or not (isinstance(zero,float)):
-        raise ValueError('spmatrix_zero_set: invalid arguments')
-    else: 
-        mat[0] = zero
-        return mat[0]
+        raise ValueError('spmatrix_zero_set: invalid arguments') 
+    mat[0] = zero
+    if (isinstance(zero, int)):
+        zero = float(zero)
+    listofKeys = [key for (key, value) in mat[1].items() if value == zero]
+    for k in listofKeys:
+        del mat[1][k]
+    """values = []
+    for key in mat[1]:
+        if (mat[1][key] == zero):
+            values.append(key)
+    for key in values:
+        mat[1].pop(key)
+    mat[0] = zero"""
+
 
 def spmatrix_value_get(mat: spmatrix, pos: position) -> float:
     """Retrieve the value from the sparse matrix mat from the given position pos passed as input parameter
@@ -111,7 +121,18 @@ def spmatrix_sparsity(mat: spmatrix) -> float:
     Get the sparsity (density) of sparse matrix mat as the number of elements divided by the total number of elements (dimension)
     If arguments are invalid => raise exception ValueError with message “spmatrix_sparsity: invalid arguments”
     """
-    
+    my_dict = mat[1]
+    if (my_dict == {}):
+        return 0.0 
+    if not ((isinstance(mat, list) and (isinstance(mat[0], float) or isinstance(mat[0], int)) and mat[0] >= 0)):
+        raise ValueError('spmatrix_sparsity: invalid arguments')
+    else:
+        min, max = spmatrix_dim(mat)
+        dim = (max[0] - min[0] +1)*(max[1] - min[1] +1)
+        sparcity = (len(my_dict)/dim)
+        return sparcity
+        
+        
 
 def spmatrix_str(mat: spmatrix, format: str) -> str:
     """
