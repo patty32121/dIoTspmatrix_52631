@@ -66,6 +66,8 @@ def position_str(pos: position) -> str:
     """
     Get the representation of the position pos as a text string with the format ‘(row, column)’
     If arguments are invalid => raise exception ValueError with message ‘position_str: invalid arguments’"""
+    if not ((type(pos) is tuple and  pos[1] >= 0 and pos[0]>=0) or not (pos[1] is int and pos[0] is int) or not (len(pos)==2)):
+        raise ValueError('position_str: invalid arguments')
     pos1 = str(pos[0])
     pos2 = str(pos[1])
     pos_final = '(' + pos1 + ', ' + pos2 + ')'  
