@@ -1,6 +1,4 @@
-from position import *
-
-
+position = tuple[int, int]
 spmatrix = [float, dict[position, float]]
 
 def spmatrix_create(zero: float = 0) -> spmatrix:
@@ -45,7 +43,7 @@ def spmatrix_zero_set(mat: spmatrix, zero: float):
     All the existing elements in the sparse matrix mat which are equal to the new zero/null are to be removed
     If arguments are invalid => raise exception ValueError with message “spmatrix_zero_set: invalid arguments”
     """
-    if not (isinstance(mat, list) and (isinstance(mat[0], float) or isinstance(mat[0], int)) and mat[0] >= 0) or not (isinstance(zero,float)):
+    if not (isinstance(mat, list) and (isinstance(mat[0], float) or isinstance(mat[0], int)) and mat[0] >= 0) or not (isinstance(zero,float) or isinstance(zero,int)):
         raise ValueError('spmatrix_zero_set: invalid arguments') 
     mat[0] = zero
     if (isinstance(zero, int)):
@@ -140,18 +138,31 @@ def spmatrix_str(mat: spmatrix, format: str) -> str:
     The values of the elements of the sparse matrix are represented with the formatting defined in the format input parameter (e.g., ‘%.1f’)
     If arguments are invalid => raise exception ValueError with message ‘spmatrix_str: invalid arguments’
     """
+    if not ((isinstance(mat, list) and (isinstance(mat[0], float) or isinstance(mat[0], int)) and mat[0] >= 0) and isinstance(format, str)):
+        raise ValueError('spmatrix_str: invalid arguments')
+    else: 
+        listofKeys = [key for (key, value) in mat[1].items() if value == k]
+        for k in listofKeys:
+            return ' '.join(mat[1])
 
 def spmatrix_row(mat: spmatrix, row: int) -> spmatrix:
     """
     Retrieve the row (row number passed as parameter) of the sparse matrix mat as a new sparse matrix
     If arguments are invalid => raise exception ValueError with message ‘spmatrix_row: invalid arguments’
     """
+    if not (isinstance(mat, list) and (isinstance(mat[0], float) or isinstance(mat[0], int)) and mat[0] >= 0) and isinstance(row,int):
+        raise ValueError('spmatrix_row: invalid arguments')    
+
+    
 
 def spmatrix_col(mat: spmatrix, col: int) -> spmatrix:
     """
     Retrieve the column (column number passed as parameter) of the sparse matrix mat as a new sparse matrix
     If arguments are invalid => raise exception ValueError with message ‘spmatrix_column: invalid arguments’
     """
+    if not (isinstance(mat, list) and (isinstance(mat[0], float) or isinstance(mat[0], int)) and mat[0] >= 0) and isinstance(col,int):
+        raise ValueError('spmatrix_row: invalid arguments')    
+
 
 def spmatrix_diagonal(mat: spmatrix) -> [spmatrix, ...]:
     """

@@ -68,7 +68,7 @@ def spmatrix_str_of_m2x2_diagonal():
     mat = spmatrix_create()
     spmatrix_value_set(mat, position_create(1,1), 12.5)
     spmatrix_value_set(mat, position_create(2,2), 5.0)
-    assert spmatrix_str(mat, "%.1f") == '12.5 0.0\n0.0 5.0'
+    assert spmatrix_str(mat, '%.1f') == '12.5 0.0\n0.0 5.0'
 
 def test_spmatrix_row_m2x2_diagonal():
     mat = spmatrix_create()
