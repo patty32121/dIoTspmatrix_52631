@@ -64,11 +64,11 @@ def test_spmatrix_sparsity_of_matrix_with_1_element_after_element_removal_using_
     print(mat)
     assert spmatrix_sparsity(mat) == 1.0
 
-def spmatrix_str_of_m2x2_diagonal():
+def test_spmatrix_str_of_m2x2_diagonal():
     mat = spmatrix_create()
     spmatrix_value_set(mat, position_create(1,1), 12.5)
     spmatrix_value_set(mat, position_create(2,2), 5.0)
-    assert spmatrix_str(mat, '%.1f') == '12.5 0.0\n0.0 5.0'
+    assert spmatrix_str(mat, "%.1f") == '12.5 0.0\n0.0 5.0'
 
 def test_spmatrix_row_m2x2_diagonal():
     mat = spmatrix_create()

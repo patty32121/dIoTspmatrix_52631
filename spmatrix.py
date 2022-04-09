@@ -139,11 +139,25 @@ def spmatrix_str(mat: spmatrix, format: str) -> str:
     If arguments are invalid => raise exception ValueError with message ‘spmatrix_str: invalid arguments’
     """
     if not ((isinstance(mat, list) and (isinstance(mat[0], float) or isinstance(mat[0], int)) and mat[0] >= 0) and isinstance(format, str)):
-        raise ValueError('spmatrix_str: invalid arguments')
-    else: 
-        listofKeys = [key for (key, value) in mat[1].items() if value == k]
-        for k in listofKeys:
-            return ' '.join(mat[1])
+        raise ValueError('spmatrix_str: invalid arguments') 
+    min_position, max_position = spmatrix_dim(mat)
+    string = ""
+
+    high = max_position[0] - min_position[0] + 1
+    width = max_position[1] - min_position[1] + 1
+
+    for y in range(high):
+        for x in range(width):
+            if ((x + min_position[0],y + min_position[1]) in mat[1]):
+                string += str(format % mat[1][(x + min_position[0],y + min_position[1])])
+            else :
+                string += str(format % mat[0])
+            if (x < (high - 1)):
+                string += " "
+        if (y < (high - 1)):
+            string += "\n"
+
+    return string
 
 def spmatrix_row(mat: spmatrix, row: int) -> spmatrix:
     """
@@ -152,7 +166,10 @@ def spmatrix_row(mat: spmatrix, row: int) -> spmatrix:
     """
     if not (isinstance(mat, list) and (isinstance(mat[0], float) or isinstance(mat[0], int)) and mat[0] >= 0) and isinstance(row,int):
         raise ValueError('spmatrix_row: invalid arguments')    
-
+    else: 
+        listofKeys = [value for (key, value) in mat[1].items() if key == row]
+        for k in listofKeys:
+            return mat[1][k]
     
 
 def spmatrix_col(mat: spmatrix, col: int) -> spmatrix:
