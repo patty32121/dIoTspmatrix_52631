@@ -9,11 +9,11 @@ pytest_spmatrix_pub.py::test_spmatrix_get_of_empty_matrix_with_zero_as_default P
 pytest_spmatrix_pub.py::test_spmatrix_get_of_empty_matrix_with_zero_as_2 PASSED [ 27%]
 pytest_spmatrix_pub.py::test_spmatrix_copy_of_empty_matrix_with_zero_as_2 PASSED [ 31%]
 pytest_spmatrix_pub.py::test_spmatrix_is_after_spmatrix_copy_after_spmatrix_create PASSED [ 36%]
-pytest_spmatrix_pub.py::test_spmatrix_value_set_and_spmatrix_value_get PASSED [ 40%]
-pytest_spmatrix_pub.py::test_spmatrix_value_get_after_replacing_value_with_spmatrix_value_get PASSED [ 45%]
+pytest_spmatrix_pub.py::test_spmatrix_value_set_and_spmatrix_value_get FAILED [ 40%]
+pytest_spmatrix_pub.py::test_spmatrix_value_get_after_replacing_value_with_spmatrix_value_get FAILED [ 45%]
 pytest_spmatrix_pub.py::test_spmatrix_dim_of_empty_matrix PASSED         [ 50%]
-pytest_spmatrix_pub.py::test_spmatrix_dim_of_matrix_with_one_element PASSED [ 54%]
-pytest_spmatrix_pub.py::test_spmatrix_sparsity_of_m2x2_diagonal_matrix PASSED [ 59%]
+pytest_spmatrix_pub.py::test_spmatrix_dim_of_matrix_with_one_element FAILED [ 54%]
+pytest_spmatrix_pub.py::test_spmatrix_sparsity_of_m2x2_diagonal_matrix FAILED [ 59%]
 pytest_spmatrix_pub.py::test_spmatrix_sparsity_of_matrix_with_1_element_after_element_removal_using_spmatrix_zero_set FAILED [ 63%]
 pytest_spmatrix_pub.py::test_spmatrix_str_of_m2x2_diagonal FAILED        [ 68%]
 pytest_spmatrix_pub.py::test_spmatrix_row_m2x2_diagonal FAILED           [ 72%]
@@ -25,14 +25,18 @@ pytest_spmatrix_pub.py::test_spmatrix_19 PASSED                          [ 95%]
 pytest_spmatrix_pub.py::test_spmatrix_34 FAILED                          [100%]
 
 =================================== FAILURES ===================================
-/home/dtsd/DTSD/pytest_spmatrix_pub.py:84: assert 1.0 == 0.0
-/home/dtsd/DTSD/pytest_spmatrix_pub.py:91: AssertionError: assert None == '12.5 0.0\n0.0 5.0'
-/home/dtsd/DTSD/pytest_spmatrix_pub.py:100: assert None == [0.0, {(1, 1): 12.5}]
-/home/dtsd/DTSD/pytest_spmatrix_pub.py:109: assert None == [0.0, {(2, 2): 5.0}]
-/home/dtsd/DTSD/pytest_spmatrix_pub.py:116: assert None == [0.0, {(1, 1): 12.5, (2, 2): 5.0}]
-/home/dtsd/DTSD/pytest_spmatrix_pub.py:124: assert None == [0.0, {}]
-/home/dtsd/DTSD/pytest_spmatrix_pub.py:144: assert 10000000 == 1
+/home/dtsd/DTSD/pytest_spmatrix_pub.py:46: NameError: name 'position_create' is not defined
+/home/dtsd/DTSD/pytest_spmatrix_pub.py:54: NameError: name 'position_create' is not defined
+/home/dtsd/DTSD/pytest_spmatrix_pub.py:66: NameError: name 'position_create' is not defined
+/home/dtsd/DTSD/pytest_spmatrix_pub.py:74: NameError: name 'position_create' is not defined
+/home/dtsd/DTSD/pytest_spmatrix_pub.py:81: NameError: name 'position_create' is not defined
+/home/dtsd/DTSD/pytest_spmatrix_pub.py:89: NameError: name 'position_create' is not defined
+/home/dtsd/DTSD/pytest_spmatrix_pub.py:96: NameError: name 'position_create' is not defined
+/home/dtsd/DTSD/pytest_spmatrix_pub.py:105: NameError: name 'position_create' is not defined
+/home/dtsd/DTSD/pytest_spmatrix_pub.py:114: NameError: name 'position_create' is not defined
+/home/dtsd/DTSD/pytest_spmatrix_pub.py:121: NameError: name 'position_create' is not defined
+/home/dtsd/DTSD/pytest_spmatrix_pub.py:141: NameError: name 'position_create' is not defined
 ============================== slowest durations ===============================
 
 (66 durations < 1s hidden.  Use -vv to show these durations.)
-========================= 7 failed, 15 passed in 0.01s =========================
+======================== 11 failed, 11 passed in 0.01s =========================
