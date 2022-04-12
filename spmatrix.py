@@ -22,7 +22,7 @@ def spmatrix_is(mat: spmatrix) -> bool:
     """
     Validate if the input parameter mat is a valid sparse matrix, returning True if yes and False if otherwise
     """  
-    if not (isinstance(mat, list) and (isinstance(mat[0], float) or isinstance(mat[0], int))):
+    if not (isinstance(mat, list) and len(mat)==2 and (isinstance(mat[0], float) or isinstance(mat[0], int)) and len(mat[1])==2 and ( mat[1][0] >= 0 ) and ( mat[1][1] >= 0 )):
         return False
     else :
         return True

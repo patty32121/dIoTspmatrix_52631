@@ -5,7 +5,8 @@ def position_create(row: int, col: int) -> position:
     Create a position based on the row and a column set as input parameters
     If arguments are invalid => raise exception ValueError with message ‘position_create: invalid arguments’
     """
-    if not (type(row) is int and row >= 0) or not (type(col) is int and col >= 0):
+    pos=[row,col]
+    if not (type(row) is int and row >= 0) or not (type(col) is int and col >= 0) or not (len(pos)==2 and pos[0]>=0 and pos[1]>=0) and (type(pos[0]) is int) and (type(pos[1]) is int):
         raise ValueError('position_create: invalid arguments')
     return row, col
 
